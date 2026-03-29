@@ -1,200 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mardonbek Usmonboyev · portfolio</title>
-    <!-- Font Awesome 5 for icons (free) -->
-    <link rel="stylesheet" href="style.css">
-    <style>
-        
-    </style>
+    <link rel="icon" type="icon" href="mardonbek.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Usmanbayev Mardonbek — Frontend Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <div class="portfolio-card">
-        <!-- header with profile-photo (icon as photo) + name + contacts -->
-        <div class="header-section">
-            <div class="profile-photo-frame">
-                <img src="mardonbek.jpg" alt="mardonbek`s photo" style="border-radius: 50%;  width: 150px;
-                height: 150px;">
-                <!-- profile-photo: using fontawesome user-circle as avatar -->
-                <i class="fas fa-user-circle"></i>
+
+    <div class="background-animation"></div>
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <!-- NAV -->
+    <nav id="mainNav">
+        <div class="container nav-container">
+            <a href="#" class="logo">Mardonbek.dev</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#education">Education</a>
+                <a href="#journey">Journey</a>
+                <a href="#skills">Skills</a>
             </div>
-            <div class="header-text">
-                <h1>Usmonboyev Mardonbek</h1>
-                <div class="tagline">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/mardonbek-usmanboyev" target="_blank">linkedin.com/in/mardonbek-usmanboyev</a>
-                </div>
-                <div class="tagline">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:usmonboyevm@gmail.com">usmonboyevm@gmail.com</a>
-                </div>
-                <div class="contact-badge">
-                    <i class="fas fa-map-marker-alt"></i> Uzbekistan · Grade 11
-                </div>
-            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#home"      onclick="closeMobileMenu()"><i class="fas fa-home"></i> Home</a>
+            <a href="#education" onclick="closeMobileMenu()"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="#journey"   onclick="closeMobileMenu()"><i class="fas fa-road"></i> Journey</a>
+            <a href="#skills"    onclick="closeMobileMenu()"><i class="fas fa-code"></i> Skills</a>
+        </div>
+        <div class="mobile-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
+    </nav>
 
-        <!-- main two columns -->
-        <div class="main-grid">
-            <!-- LEFT column (experience, projects, education) -->
-            <div class="left-panel">
-                <!-- Experience -->
-                <div class="section-title">
-                    <i class="fas fa-briefcase"></i>
-                    <span>Experience</span>
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h1>Hey! I'm <span>Usmanbayev<br>Mardonbek</span></h1>
+                    <p>A passionate Frontend Developer who loves building modern, responsive websites with HTML, CSS & JavaScript. I focus on clean design and smooth functionality.</p>
+                    <a href="#journey" class="cta-button">Explore My Journey</a>
                 </div>
-                <div class="exp-item">
-                    <div class="exp-header">
-                        <span class="exp-title">Al-Xorazmiy Vorislari</span>
-                        <span class="exp-date">Nov 2024 — May 2025</span>
-                    </div>
-                    <div class="exp-sub">Frontend Development Course</div>
-                    <div class="exp-desc">
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> Learned core web technologies: HTML, CSS, JavaScript</li>
-                            <li><i class="fas fa-check-circle"></i> Built 5+ personal projects including responsive websites and interactive forms</li>
-                            <li><i class="fas fa-check-circle"></i> Used Git for version control and GitHub for project hosting</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Personal project -->
-                <div class="section-title" style="margin-top: 2rem;">
-                    <i class="fas fa-code"></i>
-                    <span>Personal project</span>
-                </div>
-                <div class="project-item">
-                    <div class="project-title">My Portfolio Website · 2024</div>
-                    <div class="project-desc">
-                        Designed and coded a personal portfolio using HTML, CSS and vanilla JavaScript. Implemented responsive design, smooth animations, and contact form.
-                    </div>
-                    <div class="tech-tags">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Responsive</span>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div class="section-title" style="margin-top: 1.5rem;">
-                    <i class="fas fa-graduation-cap"></i>
-                    <span>Education</span>
-                </div>
-                <div class="edu-item">
-                    <div class="exp-header">
-                        <span class="exp-title">School 26 · Grade 11</span>
-                        <span class="exp-date">2025 expected</span>
-                    </div>
-                    <div class="exp-desc">Subjects: Informatics, English</div>
-                </div>
-                <div class="edu-item">
-                    <div class="exp-header">
-                        <span class="exp-title">Al-Xorazmiy Vorislari</span>
-                        <span class="exp-date">2024 — present</span>
-                    </div>
-                    <div class="exp-desc">Frontend Development Course · HTML, CSS, JavaScript, Git, GitHub</div>
-                </div>
-
-                <!-- HONORS (from left or right? but left has space) -->
-                <div class="section-title" style="margin-top: 2rem;">
-                    <i class="fas fa-medal"></i>
-                    <span>Honors</span>
-                </div>
-                <div class="honor-item">
-                    <i class="fas fa-certificate"></i>
-                    <div class="honor-text">
-                        <h4>Coursera Professional Certificate</h4>
-                        <p>Meta Front-End Developer (in progress)</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- RIGHT panel: Skills, Languages, extra contact -->
-            <div class="right-panel">
-                <!-- SKILLS (technical) -->
-                <div class="skills-group">
-                    <h3><i class="fas fa-microchip"></i> Technical Skills</h3>
-                    <div class="skill-badge-container">
-                        <span class="skill-badge"><i class="fas fa-laptop"></i> Install Windows on laptops/PC</span>
-                        <span class="skill-badge"><i class="fab fa-html5"></i> HTML5</span>
-                        <span class="skill-badge"><i class="fas fa-mobile-alt"></i> Install Firmware (Samsung)</span>
-                        <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
-                        <span class="skill-badge"><i class="fab fa-js"></i> JavaScript</span>
-                        <span class="skill-badge"><i class="fab fa-git-alt"></i> Git & GitHub</span>
-                        <span class="skill-badge"><i class="fas fa-code"></i> responsive layouts</span>
-                        <span class="skill-badge"><i class="fas fa-check-double"></i> form validation</span>
-                    </div>
-                </div>
-
-                <!-- Personal skills -->
-                <div class="skills-group">
-                    <h3><i class="fas fa-user-check"></i> Personal Skills</h3>
-                    <div class="skill-badge-container">
-                        <span class="skill-badge">Accurate</span>
-                        <span class="skill-badge">Adaptable</span>
-                        <span class="skill-badge">Ambitious</span>
-                    </div>
-                </div>
-
-                <!-- Language skills (as list) -->
-                <div class="skills-group">
-                    <h3><i class="fas fa-language"></i> Language Skills</h3>
-                    <div class="lang-item">
-                        <span class="lang-name">Uzbek</span>
-                        <span class="lang-level">Native</span>
-                    </div>
-                    <div class="lang-item">
-                        <span class="lang-name">Russian</span>
-                        <span class="lang-level">Conversational</span>
-                    </div>
-                    <div class="lang-item">
-                        <span class="lang-name">English</span>
-                        <span class="lang-level">IELTS 5 (CEFR B1)</span>
-                    </div>
-                </div>
-
-                <!-- Quick contact / repeat email for clarity -->
-                <div class="contact-section">
-                    <h3 style="color:#0b2b3b; margin-bottom:1rem;"><i class="fas fa-address-card"></i> Contact</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:usmonboyevm@gmail.com">usmonboyevm@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/mardonbek-usmanboyev" target="_blank">mardonbek-usmanboyev</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <span>(available upon request)</span>
+                <div class="hero-visual fade-in">
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <div class="profile-avatar">
+                                <img src="mardonbek.png" alt="Usmanbayev Mardonbek"/>
+                            </div>
+                            <h3 style="margin-bottom:4px">Usmanbayev Mardonbek</h3>
+                            <p style="color:var(--gray);font-size:.95rem">Frontend Developer</p>
+                            <div class="location-chip">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Uzbekistan, Khorezm</span>
+                            </div>
+                            <div style="margin-top:20px;padding:15px;background:rgba(16,185,129,0.1);border-radius:10px;width:100%">
+                                <p style="font-size:.9rem;margin-bottom:5px"><strong>Coding Since:</strong></p>
+                                <p style="font-size:1.2rem;font-weight:600;color:var(--accent)">2024</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="scroll-down">
+            <a href="#education">
+                <i class="fas fa-chevron-down"></i>
+                <span>Scroll Down</span>
+            </a>
+        </div>
+    </section>
 
-        <!-- CONTACT ME form (HTML & CSS) -->
-        <div class="contact-form-block">
-            <div class="form-title">
-                <i class="fas fa-paper-plane" style="color:#1a4b62;"></i> Contact me
+    <!-- EDUCATION -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Education Status</h2>
+                <p>My academic background and learning journey.</p>
             </div>
-            <form action="#" method="post">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email address" required>
+            <div class="cards-grid">
+                <div class="glass-card fade-in">
+                    <div class="card-icon"><i class="fas fa-school"></i></div>
+                    <h3 class="card-title">School #26 — Grade 11</h3>
+                    <p>Currently studying in the 11th grade at School #26 in Khanka district of Khorezm region. Core subjects include Mathematics and Informatics.</p>
+                    <div style="margin-top:20px;display:flex;align-items:center;gap:10px">
+                        <div style="width:10px;height:10px;background:var(--accent);border-radius:50%"></div>
+                        <span>Status: <strong>In Progress (2025)</strong></span>
                     </div>
                 </div>
-                <textarea placeholder="Your message..."></textarea>
-                <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send message</button>
-            </form>
-            <hr>
-            <small style="color:#4f6f84;"><i class="fas fa-code"></i> HTML & CSS portfolio — Mardonbek Usmonboyev</small>
+                <div class="glass-card fade-in">
+                    <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="card-title">Frontend Development Course</h3>
+                    <p>Completed a professional Frontend course at <strong>Al-Xorazmiy Vorislari</strong>. Technologies: HTML, CSS, JavaScript, Git & GitHub. Built 5+ responsive projects.</p>
+                    <div style="margin-top:20px;display:flex;align-items:center;gap:10px">
+                        <div style="width:10px;height:10px;background:var(--primary);border-radius:50%"></div>
+                        <span>Status: <strong>Completed — 2024</strong></span>
+                    </div>
+                </div>
+                <div class="glass-card fade-in">
+                    <div class="card-icon"><i class="fas fa-certificate"></i></div>
+                    <h3 class="card-title">Meta Front-End Developer</h3>
+                    <p>Earned the <strong>Professional Meta Front-End Developer</strong> certificate on Coursera — covering responsive design, React basics, and version control.</p>
+                    <div style="margin-top:20px;display:flex;align-items:center;gap:10px">
+                        <div style="width:10px;height:10px;background:var(--secondary);border-radius:50%"></div>
+                        <span>Status: <strong>Certified ✓</strong></span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey" class="journey">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>My Coding Journey</h2>
+                <p>Started in 2024 and still going strong. Here's how my development journey has progressed.</p>
+            </div>
+            <div class="journey-timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3 style="margin-bottom:10px;color:white">The Beginning</h3>
+                        <p>Enrolled at Al-Xorazmiy Vorislari and began learning HTML, CSS, and JavaScript. Fascinated by how code transforms into beautiful, interactive websites.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3 style="margin-bottom:10px;color:white">First Projects</h3>
+                        <p>Built 5+ personal projects including responsive websites and interactive forms. Learned Git & GitHub for version control and started deploying projects online.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3 style="margin-bottom:10px;color:white">Portfolio Website</h3>
+                        <p>Designed and coded a personal portfolio from scratch using HTML, CSS, and vanilla JavaScript — with smooth animations and a fully responsive layout.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-year">2025</div>
+                    <div class="timeline-content">
+                        <h3 style="margin-bottom:10px;color:white">Current Focus</h3>
+                        <p>Actively deepening JavaScript knowledge, studying advanced CSS patterns, and working toward becoming a confident Full-Stack developer in the near future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Programming Skills</h2>
+                <p>Languages and technologies I've been working with since starting my journey in 2024.</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category fade-in">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                        <div>
+                            <h3 style="color:white;margin-bottom:5px">HTML5 & CSS3</h3>
+                            <p style="color:var(--gray);font-size:.9rem">Proficient</p>
+                        </div>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">Semantic HTML</div>
+                        <div class="skill-item">Flexbox</div>
+                        <div class="skill-item">CSS Grid</div>
+                        <div class="skill-item">Animations</div>
+                        <div class="skill-item">Responsive Design</div>
+                    </div>
+                    <p style="margin-top:20px;color:var(--gray)">Building semantic, accessible markup and crafting responsive, pixel-perfect layouts with modern CSS techniques.</p>
+                </div>
+                <div class="skill-category fade-in">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                        <div>
+                            <h3 style="color:white;margin-bottom:5px">JavaScript</h3>
+                            <p style="color:var(--gray);font-size:.9rem">Learning</p>
+                        </div>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">DOM Manipulation</div>
+                        <div class="skill-item">Events</div>
+                        <div class="skill-item">ES6+</div>
+                        <div class="skill-item">Functions</div>
+                    </div>
+                    <p style="margin-top:20px;color:var(--gray)">Currently mastering core JavaScript concepts to build dynamic, interactive user interfaces.</p>
+                </div>
+                <div class="skill-category fade-in">
+                    <div class="skill-header">
+                        <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+                        <div>
+                            <h3 style="color:white;margin-bottom:5px">Git & GitHub</h3>
+                            <p style="color:var(--gray);font-size:.9rem">Basic</p>
+                        </div>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">Git</div>
+                        <div class="skill-item">GitHub</div>
+                        <div class="skill-item">Version Control</div>
+                        <div class="skill-item">Project Hosting</div>
+                    </div>
+                    <p style="margin-top:20px;color:var(--gray)">Using version control to manage projects, track changes, and build a strong portfolio on GitHub.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h2 style="font-size:1.8rem;margin-bottom:10px;background:var(--gradient-1);-webkit-background-clip:text;background-clip:text;color:transparent">
+                        Usmanbayev Mardonbek
+                    </h2>
+                    <p style="color:var(--gray)">Frontend Developer · Khorezm, Uzbekistan</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/usmanboyevmardonbek" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/usmanboyev__mardonbek/" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="@mardonbek2008" class="social-link" title="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="mailto:usmanboyevm@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> <b>Usmanbayev Mardonbek</b>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
 </body>
 </html>
